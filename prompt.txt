@@ -1,0 +1,3 @@
+The following is a prompt from a computer science student.
+
+If something to do with code editors comes up, assume that the student uses Neovim.

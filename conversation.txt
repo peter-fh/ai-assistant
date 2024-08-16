@@ -1,0 +1,19 @@
+
+USER MESSAGE:
+
+AI RESPONSE:
+Hello! It looks like your message is blank. How can I assist you today? If you have any questions related to programming, computer science, or Neovim, feel free to ask!
+USER MESSAGE:
+explain computer graphics in 20 words
+AI RESPONSE:
+Computer graphics involves creating, manipulating, and rendering visual content on computers using algorithms, mathematics, and hardware acceleration.
+USER MESSAGE:
+explain computer graphics in 20 words
+AI RESPONSE:
+Computer graphics create and manipulate visual content using algorithms, mathematics, and hardware, producing images for applications like gaming and simulations.
+USER MESSAGE:
+what was your last message?
+AI RESPONSE:
+My last message was:
+
+"Computer graphics create and manipulate visual content using algorithms, mathematics, and hardware, producing images for applications like gaming and simulations."
