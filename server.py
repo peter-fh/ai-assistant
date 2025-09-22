@@ -17,19 +17,12 @@ def question():
 
     if request.method == 'POST':
 
-        # Length of json without message:
-        empty_message_length = 11
-        message_length = len(request.data) - empty_message_length
-        if message_length > 2500:
-            return "Message too long!"
-
-        # Get course type
-
         # Message is valid length, get data and request gpt response
         data = request.get_json()
         message = data["text"]
         gpt_response = gpt.ask(message, conversation=True,example_response=False)
 
+        print("Conversation has %d tokens" % (prompts.token_usage / 4))
         return gpt_response
 
     # Reject non-POST requests (flask should handle this regardless)
@@ -39,7 +32,8 @@ def question():
 @app.route('/reset/', methods=['GET'])
 def reset():
     prompts.resetConversation()
+    prompts.token_usage = 0
     return "", 200
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=8070, debug=True)

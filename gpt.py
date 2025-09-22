@@ -11,9 +11,6 @@ def ask(question, conversation=False, example_response=False):
 
 
     prompt = prompts.getPrompt(conversation)
-    print("Sending the following query:")
-    print(prompt)
-    print(question)
     completion = client.chat.completions.create(
       model="gpt-4o",
       messages=[
@@ -29,7 +26,6 @@ def ask(question, conversation=False, example_response=False):
       ]
     )
     msg = str(completion.choices[0].message.content)
-
     if conversation:
         with open("conversation.txt", 'a') as f:
             f.write("\nUSER MESSAGE:\n")
